@@ -96,7 +96,7 @@ func newMessage(c Config) Message {
 
 // postMessage sends a message.
 func postMessage(conf Config, msg Message) error {
-	b, err := json.Marshal(msg)
+	b, err := json.Marshal([]Message{msg})
 	if err != nil {
 		return err
 	}
